@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "UberMove";
+  src: url("/fonts/UberMove-Regular.woff2");
+}
+
+@font-face {
+  font-family: "UberMoveText";
+  src: url("/fonts/UberMoveText-Regular.woff2");
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: UberMove, UberMoveText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
