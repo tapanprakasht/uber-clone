@@ -1,12 +1,33 @@
 import styled from "styled-components";
 
-export const StyledMainContent = styled.section`
+interface StyledMainContentProps {
+    height: string;
+}
+
+export const StyledMainContent = styled.section<StyledMainContentProps>`
     display: flex;
     position: relative;
+    height: ${({ height }) => height};
 
     & > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        object-fit: cover;
         width: 100%;
-        height: auto;
+        height: 100%;
+    }
+
+    @media screen and (max-width: 1300px) {
+        display: flex;
+        flex-direction: column;
+        height: initial;
+
+        & > img {
+            position: static;
+        }
     }
 `
 
@@ -15,8 +36,16 @@ export const UberProducts = styled.div`
     top: 50px;
     left: 250px;
     width: 550px;
-    /* height: 550px; */
     background: ${({ theme}) => theme.colors.invert_background_color };
+    z-index: 1;
+
+    @media screen and (max-width: 1300px) {
+        /* top: 0;
+        left: 0;
+        right: 0;
+        width: 100%; */
+        position: static;
+    }
 `
 
 export const NavBar = styled.nav`
@@ -27,6 +56,11 @@ export const NavBar = styled.nav`
     height: 120px;
     padding: 0 80px;
     border-bottom: 1px solid #eaeaea;
+
+    @media screen and (max-width: 1300px) {
+        justify-content: flex-start;
+        padding: 0 10px;
+    }
 `
 interface NavBarItemProps {
     isSelected?: boolean;
@@ -50,6 +84,10 @@ export const NavBarItem = styled.div<NavBarItemProps>`
     img {
         margin-bottom: 10px;
     }
+
+    @media screen and (max-width: 1300px) {
+        margin: 0 20px;
+    }
 `
 export const DriveContent = styled.div`
     padding: 20px 50px;
@@ -59,6 +97,10 @@ export const DriveContent = styled.div`
         font-family: UberMove;
         font-size: 52px;
         font-weight: 600;
+
+        @media screen and (max-width: 1300px) {
+            font-size: 36px;
+        }
     }
     p {
         margin: 30px 0;

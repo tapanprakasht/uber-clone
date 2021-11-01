@@ -23,6 +23,30 @@ export const Container = styled.div`
     & > ul:nth-child(2) {
         flex: 1;
     }
+
+    @media screen and (max-width: 1300px) {
+       justify-content: space-between;
+       margin: 0 10px;
+    }
+`
+
+export const TitleContainer = styled.ul`
+    margin-left: 20px;
+`
+export const PrimaryMenuContainer = styled.ul`
+    @media screen and (max-width: 1300px) {
+        display: none !important;;
+    }
+`
+export const SecondaryMenuContainer = styled.ul`
+    @media screen and (max-width: 1300px) {
+        & > li {
+            display: none !important;
+        }
+        & > li:last-child {
+            display: block !important;
+        }
+    }
 `
 export const Title = styled.h1`
     padding-right: 10px;

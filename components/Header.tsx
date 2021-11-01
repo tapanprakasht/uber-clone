@@ -1,25 +1,34 @@
-import { StyledHeader, Container, Title, RoundedButton, RoundedIconButton } from './styles/Header.styled';
+import {
+    StyledHeader,
+    Container,
+    Title,
+    RoundedButton,
+    RoundedIconButton,
+    TitleContainer,
+    PrimaryMenuContainer,
+    SecondaryMenuContainer
+} from './styles/Header.styled';
 import { FaGlobe, FaUserAlt, FaTh } from 'react-icons/fa';
 
 function Header() {
     return (
         <StyledHeader>
             <Container>
-                <ul>
+                <TitleContainer>
                     <Title>Uber</Title>
-                </ul>
-                <ul>
+                </TitleContainer>
+                <PrimaryMenuContainer>
                     <RoundedButton>Company</RoundedButton>
                     <RoundedButton>Safety</RoundedButton>
                     <RoundedButton>Help</RoundedButton>
                     <RoundedButton>COVID-19 resources</RoundedButton>
-                </ul>
-                <ul>
+                </PrimaryMenuContainer>
+                <SecondaryMenuContainer>
                     <RoundedIconButton><FaGlobe/><span>EN</span></RoundedIconButton>
                     <RoundedIconButton><FaTh/><span>Products</span></RoundedIconButton>
                     <RoundedIconButton><FaUserAlt/><span>Log in</span></RoundedIconButton>
                     <RoundedButton isInvert={true}>Sign up</RoundedButton>
-                </ul>
+                </SecondaryMenuContainer>
             </Container>
         </StyledHeader>
     )

@@ -4,6 +4,10 @@ export const Container = styled.div`
     width: 100%;
     max-width: 1190px;
     margin: 0 auto;
+
+    @media screen and (max-width: 1190px) {
+        padding: 0 30px;
+    }
 `
 
 export const StyledLink = styled.a`

@@ -1,11 +1,13 @@
 import Image from 'next/image'
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { StyledMainContent, UberProducts, NavBar, NavBarItem, DriveContent, EatContent, RideContent } from './styles/MainContent.styled'
 import { UInput } from './Reservartion.styled';
 import Button from './Button';
 import { StyledLink } from './styles/Utils';
 
 function MainContent() {
+    const imageRef = useRef(null);
+    const [containerHeight, setContaierHeight] = useState(691);
     const [selectedIndex, setSelectedIndex] = useState<number>(1);
     const options = [
         {
@@ -31,6 +33,17 @@ function MainContent() {
     const handleOnClickNavItem = (id: number) => {
         setSelectedIndex(id);
     }
+    useEffect(() => {
+        console.log("Imgeeref changes", imageRef);
+        if(imageRef != null) {
+            imageRef.current.addEventListener('load', imageLoaded);
+        }
+    }, []);
+
+    const imageLoaded = () => {
+        setContaierHeight(imageRef.current.clientHeight);
+    }
+
     const bannerImage = options[selectedIndex - 1].banner;
     const getContent = (): JSX.Element => {
         switch(selectedIndex) {
@@ -64,8 +77,7 @@ function MainContent() {
         }
     }
     return (
-        <StyledMainContent>
-            <img src={bannerImage} alt='banner'/>
+        <StyledMainContent height={containerHeight + 'px'}>
             <UberProducts>
                 <NavBar>
                     {
@@ -85,6 +97,7 @@ function MainContent() {
                 </NavBar>
                 {getContent()}
             </UberProducts>
+            <img ref={imageRef} src={bannerImage} alt='banner'/>
         </StyledMainContent>
     )
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { GridContainer } from './SafetySection.styled';
 
 export const StyledAppSection = styled.section`
     display: flex;
@@ -9,6 +10,19 @@ export const StyledAppSection = styled.section`
     h1 {
         font-family: UberMoveText;
         font-size: 36px;
+    }
+
+    @media screen and (max-width: 1300px) {
+        padding: 0px;
+        h1 {
+            font-size: 25px;
+        }
+    }
+`
+export const AppGridContainer = styled(GridContainer)`
+    @media screen and (max-width: 1300px) {
+       grid-template-columns: 1fr;
+       grid-gap: 40px;
     }
 `
 

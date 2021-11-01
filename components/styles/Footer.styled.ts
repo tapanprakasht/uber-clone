@@ -14,6 +14,11 @@ export const GridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 30px;
+
+    @media screen and (max-width: 1300px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
 `
 
 export const GridItem = styled.div`
@@ -63,6 +68,13 @@ export const SocialMediaAndApps = styled.div`
     align-items: center;
     justify-content: space-between;
     margin: 50px 0 ;
+
+    @media screen and (max-width: 1300px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 40px;
+    }
 `
 
 export const GreyButton = styled.div`
@@ -99,6 +111,10 @@ export const Languages = styled.div`
             transition: 0.3s ease;
         }
     }
+
+    @media screen and (max-width: 1300px) {
+       padding-left: 0px;
+    }
 `
 
 export const Apps = styled.div`
@@ -107,5 +123,9 @@ export const Apps = styled.div`
         width: 200px;
         height: 50px;
         padding-left: 10px;
+    }
+
+    @media screen and (max-width: 1300px) {
+        transform: translateX(-10px);
     }
 `

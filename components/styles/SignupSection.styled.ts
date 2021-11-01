@@ -8,6 +8,11 @@ export const StyledSignupSection = styled.section`
 export const SignupGridContainer = styled(GridContainer)`
     margin-top: 0;
     padding: 50px 0;
+
+    @media screen and (max-width: 1300px) {
+       grid-template-columns: 1fr;
+       grid-gap: 40px;
+    }
 `
 
 export const GridItem = styled.div`
@@ -23,7 +28,7 @@ export const GridItem = styled.div`
 
     &:hover {
         & > svg {
-            transform: translateX(30px);
+            /* transform: translateX(30px); */
         }
     }
 `

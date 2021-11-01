@@ -16,6 +16,14 @@ export const GridContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
+
+    @media screen and (max-width: 1300px) {
+        grid-template-columns: repeat(1, 1fr);
+
+        & > img {
+            display: none;
+        }
+    }
 `
 
 export const ReservationItem = styled.div`
@@ -59,6 +67,10 @@ export const ReservationItem = styled.div`
         font-size: 14px;
         margin: 10px 0;
         color: #585858;
+    }
+
+    @media screen and (max-width: 1300px) {
+        padding: 0 30px;
     }
 `
 
