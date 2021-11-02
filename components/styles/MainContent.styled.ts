@@ -40,11 +40,8 @@ export const UberProducts = styled.div`
     z-index: 1;
 
     @media screen and (max-width: 1300px) {
-        /* top: 0;
-        left: 0;
-        right: 0;
-        width: 100%; */
         position: static;
+        width: 100%;
     }
 `
 
@@ -96,13 +93,15 @@ export const DriveContent = styled.div`
         font-family: UberMove;
         font-size: 52px;
         font-weight: 600;
-
-        @media screen and (max-width: 1300px) {
-            font-size: 36px;
-        }
     }
     p {
         margin: 30px 0;
+    }
+    @media screen and (max-width: 1300px) {
+        padding: 20px 30px 30px;
+        h1 {
+            font-size: 36px;
+        }
     }
 `
 
@@ -140,6 +139,13 @@ export const EatContent = styled.div`
             background: ${({ theme}) => theme.colors.background_color };
         }
     }
+
+    @media screen and (max-width: 1300px) {
+        padding: 20px 30px 30px;
+        h1 {
+            font-size: 36px;
+        }
+    }
 `
 
 export const RideContent = styled.div`
@@ -158,5 +164,12 @@ export const RideContent = styled.div`
         margin-top: 20px;
         display: flex;
         gap: 20px;
+    }
+
+    @media screen and (max-width: 1300px) {
+        padding: 20px 30px 30px;
+        h1 {
+            font-size: 36px;
+        }
     }
 `
