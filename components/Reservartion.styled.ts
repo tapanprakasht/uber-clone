@@ -32,23 +32,20 @@ export const ReservationItem = styled.div`
     padding: 0 70px;
 
     h1 {
-        font-family: UberMoveText;
         font-size: 36px;
         font-weight: 600;
         margin-bottom: 10px;
     }
 
     h3 {
-        font-family: UberMoveText;
         font-size: 18px;
         font-weight: 600;
     }
 
     p {
-        font-family: UberMoveText;
         line-height: 24px;
         margin: 20px 0;
-        color: #262626;
+        color: ${({ theme }) => theme.colors.hover_background_color };
     }
 
     a {
@@ -63,10 +60,9 @@ export const ReservationItem = styled.div`
         gap: 10px;
     }
     & > span {
-        font-family: UberMoveText;
         font-size: 14px;
         margin: 10px 0;
-        color: #585858;
+        color: ${({ theme }) => theme.colors.light_text_color };
     }
 
     @media screen and (max-width: 1300px) {
@@ -76,10 +72,9 @@ export const ReservationItem = styled.div`
 
 export const UInput = styled.input`
     border: none;
-    background: #f4f4f4;
+    background: ${({ theme}) => theme.colors.grey_background_color };
     height: 50px;
     width: 100%;
-    font-family: UberMoveText;
     font-size: 16px;
     padding-left: 30px;
     margin: 5px 0;

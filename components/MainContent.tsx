@@ -1,12 +1,20 @@
 import Image from 'next/image'
 import { useState, useRef, useEffect } from 'react';
-import { StyledMainContent, UberProducts, NavBar, NavBarItem, DriveContent, EatContent, RideContent } from './styles/MainContent.styled'
+import {
+    StyledMainContent,
+    UberProducts,
+    NavBar,
+    NavBarItem,
+    DriveContent,
+    EatContent,
+    RideContent
+} from './styles/MainContent.styled'
 import { UInput } from './Reservartion.styled';
 import Button from './Button';
 import { StyledLink } from './styles/Utils';
 
 function MainContent() {
-    const imageRef = useRef(null);
+    const imageRef = useRef<HTMLImageElement | null>(null);
     const [containerHeight, setContaierHeight] = useState(691);
     const [selectedIndex, setSelectedIndex] = useState<number>(1);
     const options = [
@@ -34,14 +42,13 @@ function MainContent() {
         setSelectedIndex(id);
     }
     useEffect(() => {
-        console.log("Imgeeref changes", imageRef);
-        if(imageRef != null) {
-            imageRef.current.addEventListener('load', imageLoaded);
-        }
+        imageRef?.current?.addEventListener('load', imageLoaded);
     }, []);
 
     const imageLoaded = () => {
-        setContaierHeight(imageRef.current.clientHeight);
+        if(imageRef && imageRef.current) {
+            setContaierHeight(imageRef.current.clientHeight);
+        }
     }
 
     const bannerImage = options[selectedIndex - 1].banner;
@@ -49,7 +56,7 @@ function MainContent() {
         switch(selectedIndex) {
             case 1: return (
                 <DriveContent>
-                    <h1>Get in the driver's seat and get paid</h1>
+                    <h1>Get in the driver&apos;s seat and get paid</h1>
                     <p>Drive on the platform with the largest network of active riders.</p>
                     <Button label="Sign up to drive"/><br />
                     <StyledLink>Learn more about driving and delivering</StyledLink>

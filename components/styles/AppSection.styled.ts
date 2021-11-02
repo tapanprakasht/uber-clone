@@ -3,17 +3,16 @@ import { GridContainer } from './SafetySection.styled';
 
 export const StyledAppSection = styled.section`
     display: flex;
-    background: #f4f4f4;
+    background: ${({ theme}) => theme.colors.grey_background_color };;
     padding: 50px;
     margin-top: 40px;
 
     h1 {
-        font-family: UberMoveText;
         font-size: 36px;
     }
 
     @media screen and (max-width: 1300px) {
-        padding: 0px;
+        padding: 50px 0px;
         h1 {
             font-size: 25px;
         }
@@ -31,10 +30,9 @@ export const GridItem = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: white;
+    background: ${({ theme}) => theme.colors.invert_background_color };
     padding: 30px;
     width: 100%;
-    font-family: UberMoveText;
     font-size: 24px;
     font-weight: 600;
     border: 1px solid #d9d9d9;
@@ -47,6 +45,12 @@ export const GridItem = styled.div`
         & > svg {
             transform: translateX(10px);
             transition: transform 0.3s ease;
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+        img {
+            width: 80px
         }
     }
 `

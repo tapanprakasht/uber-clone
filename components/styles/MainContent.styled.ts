@@ -52,7 +52,7 @@ export const NavBar = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: white;
+    background: ${({ theme}) => theme.colors.invert_background_color };
     height: 120px;
     padding: 0 80px;
     border-bottom: 1px solid #eaeaea;
@@ -76,7 +76,6 @@ export const NavBarItem = styled.div<NavBarItemProps>`
     height: 100%;
     width: 60px;
     border-bottom: 5px solid ${({ isSelected }) => isSelected ? 'black': 'white'};
-    font-family: UberMoveText;
     font-size: 14px;
     font-weight: 500;
     text-align: center;
@@ -108,7 +107,7 @@ export const DriveContent = styled.div`
 `
 
 export const EatContent = styled.div`
-    padding: 20px 50px;
+    padding: 20px 50px 50px;
 
     h1 {
         margin: 30px 0;
@@ -120,9 +119,9 @@ export const EatContent = styled.div`
         margin: 20px 0;
     }
     a {
-        position: relative;
         display: inline-block;
-        margin: 30px 20px;
+        position: relative;
+        margin: 0px 10px;
         padding: 5px 0;
         border-bottom: 1px solid #eaeaea;
 
@@ -132,13 +131,13 @@ export const EatContent = styled.div`
             height: 1px;
             margin: 5px 0;
             width: 0%;
-            background: black;
+            background: ${({ theme}) => theme.colors.background_color };
             display: block;
             transition: all ease-in-out 0.1s;
         }
         &:hover:after {
             width: 100%;
-            background: black;
+            background: ${({ theme}) => theme.colors.background_color };
         }
     }
 `

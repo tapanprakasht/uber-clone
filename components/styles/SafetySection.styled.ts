@@ -4,7 +4,6 @@ export const StyledSafetySection = styled.section`
     display: flex;
 
     h1 {
-        font-family: UberMoveText;
         font-size: 36px;
         font-weight: 600;
     }
@@ -25,14 +24,12 @@ export const GridItem = styled.div`
     }
 
     h2 {
-        font-family: UberMoveText;
         font-size: 18px;
         font-weight: 600;
         padding: 20px 0;
     }
 
     p {
-        font-family: UberMoveText;
         font-size: 16px;
         line-height: 24px;
         font-weight: 400;

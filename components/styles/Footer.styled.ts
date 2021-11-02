@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const StyledFooterSection = styled.div`
     display: flex;
-    background: black;
-    color: white;
+    background: ${({ theme}) => theme.colors.background_color };
+    color: ${({ theme}) => theme.colors.invert_background_color };
 `
 export const FlexColumnContainer = styled.div`
     display: flex;
     flex-direction: column;
-    font-family: UberMoveText;
 `
 export const GridContainer = styled.div`
     display: grid;
@@ -35,7 +34,7 @@ export const GridItem = styled.div`
             font-size: 14px;
 
             &:hover {
-                color: #a8a8a8;
+                color: ${({ theme}) => theme.colors.hover_text_color };
             }
         }
     }
@@ -57,7 +56,6 @@ export const LeftFlexItem = styled(FlexItem)`
     align-self: flex-start;
 
     & > div:first-child {
-        font-family: UberMoveText;
         font-size: 24px;
     }
 `
@@ -81,7 +79,7 @@ export const GreyButton = styled.div`
     cursor: pointer;
     padding: 10px;
     &:hover {
-        background: #262626;
+        background: ${({ theme}) => theme.colors.hover_background_color };
         transition: 0.3s ease;
     }
 `
@@ -107,7 +105,7 @@ export const Languages = styled.div`
             padding-left: 10px;
         }
         &:hover {
-            background: #262626;
+            background: ${({ theme}) => theme.colors.hover_background_color };
             transition: 0.3s ease;
         }
     }
@@ -118,7 +116,6 @@ export const Languages = styled.div`
 `
 
 export const Apps = styled.div`
-    /* background: red; */
     img {
         width: 200px;
         height: 50px;

@@ -24,12 +24,12 @@ export const StyledLink = styled.a`
         height: 1px;
         margin: 5px 0;
         width: 0%;
-        background: black;
+        background: ${({ theme}) => theme.colors.background_color };
         display: block;
         transition: all ease-in-out 0.1s;
     }
     &:hover:after {
         width: 100%;
-        background: black;
+        background: ${({ theme}) => theme.colors.background_color };
     }
 `

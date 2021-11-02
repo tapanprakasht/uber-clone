@@ -12,7 +12,6 @@ export const StyledUberBusiness = styled.section`
     height: 300px;
 
     h1 {
-        font-family: UberMoveText;
         font-size: 36px;
         font-weight: 600;
     }

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.nav`
-    background: black;
-    color: white;
+    background: ${({ theme}) => theme.colors.background_color };
+    color: ${({ theme}) => theme.colors.primary_text_color };;
     height: 65px;
     display: flex;
     align-items: center;
@@ -62,7 +62,6 @@ interface RoundedButtonProps {
 export const RoundedButton = styled.li<RoundedButtonProps>`
     cursor: pointer;
     padding: 10px 15px;
-    font-family: UberMoveText;
     font-size: 14px;
     font-weight: 600;
     border-radius: 500px;

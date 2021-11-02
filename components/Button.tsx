@@ -10,7 +10,6 @@ const StyledButton = styled.button<StyledButtonProps>`
     background: ${({ secondary }) => secondary ? '#eaeaea' : 'black'};
     color: ${({ secondary }) => secondary ? 'black' : 'white'};;
     padding: 15px 20px;
-    font-family: UberMoveText;
     font-size: 16px;
     font-weight: 500;
     border: none;

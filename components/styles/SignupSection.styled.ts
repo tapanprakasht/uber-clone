@@ -23,7 +23,6 @@ export const GridItem = styled.div`
     width: 100%;
     padding: 30px 0;
     border-bottom: 1px solid black;
-    font-family: UberMoveText;
     font-size: 23px;
 
     &:hover {
