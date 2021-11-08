@@ -13,6 +13,7 @@ const theme = {
      grey_background_color: '#f4f4f4',
      invert_background_color: 'white',
      hover_background_color: '#262626',
+     selected_background_color: '#424242',
      invert_hover_background_color: '#dbdbdb'
    }
 }

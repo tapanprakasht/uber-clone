@@ -13,8 +13,6 @@ export const GridContainer = styled.div`
     display: grid;
     grid-column-gap: 40px;
     grid-template-columns: repeat(2, 1fr);
-    /* align-items: center;
-    justify-items: center; */
     margin-top: 30px;
 `
 

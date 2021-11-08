@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
-interface StyledMainContentProps {
-    height: string;
-}
-
-export const StyledMainContent = styled.section<StyledMainContentProps>`
+export const StyledMainContent = styled.section`
     display: flex;
     position: relative;
-    height: ${({ height }) => height};
+    height: 691px;
 
     & > img {
         position: absolute;
@@ -94,6 +90,7 @@ export const DriveContent = styled.div`
         font-size: 52px;
         font-weight: 600;
     }
+
     p {
         margin: 30px 0;
     }
@@ -114,9 +111,11 @@ export const EatContent = styled.div`
         font-size: 52px;
         font-weight: 600;
     }
+
     p {
         margin: 20px 0;
     }
+
     a {
         display: inline-block;
         position: relative;

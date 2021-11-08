@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
     StyledMainContent,
     UberProducts,
@@ -14,8 +14,6 @@ import Button from './Button';
 import { StyledLink } from './styles/Utils';
 
 function MainContent() {
-    const imageRef = useRef<HTMLImageElement | null>(null);
-    const [containerHeight, setContaierHeight] = useState(691);
     const [selectedIndex, setSelectedIndex] = useState<number>(1);
     const options = [
         {
@@ -40,15 +38,6 @@ function MainContent() {
 
     const handleOnClickNavItem = (id: number) => {
         setSelectedIndex(id);
-    }
-    useEffect(() => {
-        imageRef?.current?.addEventListener('load', imageLoaded);
-    }, []);
-
-    const imageLoaded = () => {
-        if(imageRef && imageRef.current) {
-            setContaierHeight(imageRef.current.clientHeight);
-        }
     }
 
     const bannerImage = options[selectedIndex - 1].banner;
@@ -84,7 +73,7 @@ function MainContent() {
         }
     }
     return (
-        <StyledMainContent height={containerHeight + 'px'}>
+        <StyledMainContent>
             <UberProducts>
                 <NavBar>
                     {
@@ -104,7 +93,7 @@ function MainContent() {
                 </NavBar>
                 {getContent()}
             </UberProducts>
-            <img ref={imageRef} src={bannerImage} alt='banner'/>
+            <img src={bannerImage} alt='banner'/>
         </StyledMainContent>
     )
 }

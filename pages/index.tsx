@@ -8,11 +8,13 @@ import AboutSection from '../components/AboutSection'
 import AppSection from '../components/AppSection'
 import SignupSection from '../components/SignupSection'
 import Footer from '../components/Footer'
+import { MenuOverlayRoot } from '../components/MenuOverlay';
 
 const Home: NextPage = () => {
   return (
     <>
       <Header/>
+      <MenuOverlayRoot/>
       <MainContent/>
       <UberBusiness/>
       <Reservation/>

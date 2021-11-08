@@ -3,13 +3,14 @@ import styled from 'styled-components'
 
 interface StyledButtonProps {
     secondary?: boolean;
+    padding?: string;
 }
 
 const StyledButton = styled.button<StyledButtonProps>`
     cursor: pointer;
     background: ${({ secondary }) => secondary ? '#eaeaea' : 'black'};
     color: ${({ secondary }) => secondary ? 'black' : 'white'};;
-    padding: 15px 20px;
+    padding: ${({ padding }) => padding ? padding: '15px 20px'};
     font-size: 16px;
     font-weight: 500;
     border: none;
@@ -22,11 +23,12 @@ const StyledButton = styled.button<StyledButtonProps>`
 interface ButtonProps {
     label: string,
     secondary?: boolean;
+    padding?: string;
 }
 
-function Button({ label, secondary }: ButtonProps) {
+function Button({ label, secondary, padding }: ButtonProps) {
     return (
-        <StyledButton secondary={secondary}>
+        <StyledButton secondary={secondary} padding={padding}>
             {label}
         </StyledButton>
     )
