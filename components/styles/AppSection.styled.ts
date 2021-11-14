@@ -53,4 +53,10 @@ export const GridItem = styled.div`
             width: 80px
         }
     }
+
+    @media screen and (max-width: 480px) {
+        img {
+            margin-right: 5px
+        }
+    }
 `

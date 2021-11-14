@@ -14,6 +14,10 @@ export const GridContainer = styled.div`
     grid-column-gap: 40px;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 30px;
+
+    @media screen and (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr);;
+    }
 `
 
 export const GridItem = styled.div`

@@ -9,6 +9,10 @@ export const FlexRowContainer = styled(Container)`
     display: flex;
     flex-direction: row;
     gap: 40px;
+
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+    }
 `
 
 export const FlexItem = styled.div`

@@ -3,7 +3,6 @@ import {
     GridItem,
     AppGridContainer
 } from './styles/AppSection.styled';
-import { GridContainer } from './styles/SafetySection.styled';
 import { Container } from './styles/Utils';
 import { FaArrowRight } from 'react-icons/fa';
 

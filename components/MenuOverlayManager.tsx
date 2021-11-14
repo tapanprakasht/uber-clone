@@ -16,6 +16,7 @@ class MenuOverlayManager {
 
     public closeOverlay = () => {
         if(this.overlayRef) {
+            document.getElementsByTagName('body')[0].style.overflow = 'visible';
             this.setIsMenuOpenFunc(false);
             this.deselectMenuFunc && this.deselectMenuFunc();
             ReactDOM.unmountComponentAtNode(this.overlayRef);
@@ -26,6 +27,7 @@ class MenuOverlayManager {
         this.setIsMenuOpenFunc = setIsMenuOpen;
         this.deselectMenuFunc = delectMenu;
         if (process.browser) {
+            document.getElementsByTagName('body')[0].style.overflow = 'hidden';
             ReactDOM.render(<MenuOverlay closeOverlay={this.closeOverlay} child={childComponent}/>, this.overlayRef)
         }
     }
